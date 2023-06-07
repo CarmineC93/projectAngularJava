@@ -1,0 +1,23 @@
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Active</th>
+    <th>Date</th>
+
+  </tr>
+  </thead>
+<tbody>
+  <tr *ngFor="let article of articles">
+    <td>{{article.id}}</td>
+    <td>{{article.title}}</td>
+    <td>{{article.description}}</td>
+    <td>{{article.price | currency : 'EUR'}}</td>
+    <td>{{article.active}}</td>
+    <td>{{article.date | date : 'dd-MM-YYYY'}}</td>
+  </tr>
+</tbody>
+</table>
