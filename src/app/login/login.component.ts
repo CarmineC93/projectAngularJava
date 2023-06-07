@@ -8,11 +8,12 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  userId: string = "Carmine";
+  userId: string = "";
   password: string = "";
   autenticated: boolean = true;
   errMsg: string = "Sorry, there is an error"
   okMsg: string = "Ok, you can enter"
+  title : string ="Access & Authentication";
 
   constructor(private route: Router) { }
 

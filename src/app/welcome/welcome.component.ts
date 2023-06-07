@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class WelcomeComponent implements OnInit {
 
   user: string = "";
+  title : string ="Access & Authentication";
 
   constructor(private route: ActivatedRoute) {
 

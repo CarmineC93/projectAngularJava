@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { ErrorComponent } from './error/error.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ArticlesComponent } from './articles/articles.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
