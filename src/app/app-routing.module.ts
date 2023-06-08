@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 import { ErrorComponent } from './error/error.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { ArticlesComponent } from './articles/articles.component';
-import { LogoutComponent } from './logout/logout.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
+import { LogoutComponent } from './pages/logout/logout.component';
 import { RouteGuardServiceService } from 'src/services/route-guard-service.service';
 
 const routes: Routes = [
