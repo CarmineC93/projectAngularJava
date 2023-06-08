@@ -4,5 +4,6 @@ export interface IArticles {
   description: string,
   price: number,
   active: boolean,
-  date: Date
+  date: Date,
+  imageurl: string,
 }

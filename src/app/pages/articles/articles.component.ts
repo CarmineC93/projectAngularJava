@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IArticles } from '../../models/articles';
+import { ArticlesService } from 'src/services/articles.service';
 
 @Component({
   selector: 'app-articles',
@@ -8,15 +9,12 @@ import { IArticles } from '../../models/articles';
 })
 export class ArticlesComponent implements OnInit {
 
-  articles: IArticles[] = [
-    {id : 1, description: 'prova', title: 'prova', price : 5.00 , active : true, date : new Date()},
-    {id : 2, description: 'prova2', title: 'prova2', price : 5.00,  active : true, date : new Date()},
-    {id : 3, description: 'prova3', title: 'prova3', price : 5.00, active : true, date : new Date()},
-  ]
+  articles: IArticles[] = [];
 
-  constructor() { }
+  constructor(private articlesService : ArticlesService) { }
 
   ngOnInit(): void {
+    this.articles= this.articlesService.getArticles();
   }
 
 }
