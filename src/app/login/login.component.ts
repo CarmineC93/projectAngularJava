@@ -31,5 +31,4 @@ export class LoginComponent implements OnInit {
       this.autenticated = false;
     }
   }
-
 }
