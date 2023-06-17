@@ -12,7 +12,7 @@ import { CoreModule } from './core/core.module';
 import { LogoutComponent } from './pages/logout/logout.component';
 import { GridArticlesComponent } from './pages/grid-articles/grid-articles.component';
 import { ArticlesCardComponent } from './components/articles-card/articles-card.component';
-
+import{HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +29,8 @@ import { ArticlesCardComponent } from './components/articles-card/articles-card.
     AppRoutingModule,
     FormsModule,
     CoreModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

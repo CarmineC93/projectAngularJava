@@ -11,6 +11,7 @@ export class WelcomeComponent implements OnInit {
 
   user: string = "";
   title : string ="Access & Authentication";
+  errorMessage : string = "";
 
   constructor(private route: ActivatedRoute, private salutiSrv  : SalutiDataService) {
 
@@ -21,7 +22,21 @@ export class WelcomeComponent implements OnInit {
     this.user = this.route.snapshot.params['userId'];
   }
 
-  getSaluti = () : void => console.log(this.salutiSrv.getSaluti());
+  saluti :string ="";
 
+  getSaluti = () : void => {
+    this.salutiSrv.getSaluti(this.user).subscribe(
+      {next: this.handleResponse.bind(this),
+      error: this.handleError.bind(this) }
+    );
+  }
+handleResponse(response: Object){
+  this.saluti = response.toString();
+}
+
+handleError(error: any){
+  console.log(error);
+  this.errorMessage = error.error.message;
+}
 
 }
