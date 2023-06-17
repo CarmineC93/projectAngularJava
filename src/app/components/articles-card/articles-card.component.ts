@@ -1,5 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { IArticles } from 'src/app/models/articles';
+// import { EventEmitter } from 'stream';
+import { EventEmitter } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-articles-card',
@@ -12,7 +16,7 @@ export class ArticlesCardComponent implements OnInit {
 
   @Input()
   article: IArticles={
-    id: 0,
+    id: "",
     title: '',
     description: '',
     price: 0,
@@ -24,4 +28,13 @@ export class ArticlesCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Output()
+  delete = new EventEmitter();
+
+  @Output()
+  edit = new EventEmitter();
+
+  editArt = () => this.edit.emit(this.article.id);
+
+  deleteArt = () => this.delete.emit(this.article.id);
 }

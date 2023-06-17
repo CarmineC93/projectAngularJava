@@ -7,9 +7,9 @@ import { IArticles } from 'src/app/models/articles';
 export class ArticlesService {
 
   articles: IArticles[] = [
-    {  id: 1, title: 'Penne rigate', description: 'pasta rigata',price: 1.20,
+    {  id: "1", title: 'Penne rigate', description: 'pasta rigata',price: 1.20,
       active: true,date: new Date(),imageurl: 'assets/images/prodotti/1.jpg'},
-      {  id: 2, title: 'Penne lisce', description: 'pasta liscia',price: 1.50,
+      {  id: "2", title: 'Penne lisce', description: 'pasta liscia',price: 1.50,
       active: true,date: new Date(),imageurl: 'assets/images/prodotti/1.jpg'}
     ]
 
@@ -17,7 +17,7 @@ export class ArticlesService {
 
   getArticles = () : IArticles[] => this.articles;
 
-  getArticlesByCode = (id : number) : IArticles => {
+  getArticlesByCode = (id : string) : IArticles => {
     const index = this.articles.findIndex(articles => articles.id === id);
     return this.articles[index];
   }
